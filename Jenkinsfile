@@ -6,9 +6,9 @@ pipeline {
     stages{
         stage('Build Docker Image'){
             steps{
-                dir ("./bulletin-board-app") {
+                
                     sh "docker build . -t hoang000147/socketdemo:${DOCKER_TAG} "
-                }
+                
             }
         }
         stage('DockerHub Push'){
