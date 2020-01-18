@@ -28,11 +28,12 @@ pipeline {
                     //sh "ssh vcntt@112.137.141.18 kubectl get namespace"
                     sh "scp -o StrictHostKeyChecking=no socketdemo-deploy.yaml vcntt@112.137.141.18:~/socketdemo/"
                     script{
-                        try{
+                        /*try{
                             sh "ssh vcntt@112.137.141.18 kubectl apply -f ~/socketdemo/socketdemo-deploy.yaml"
                         }catch(error){
                             sh "ssh vcntt@112.137.141.18 kubectl create -f ~/socketdemo/socketdemo-deploy.yaml"
-                        }
+                        }*/
+                        sh "ssh vcntt@112.137.141.18 kubectl apply -f ~/socketdemo/socketdemo-deploy.yaml"
                     }
                 }
             }
