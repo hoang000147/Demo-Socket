@@ -27,6 +27,6 @@ spec:
   selector:
     bb: web
   ports:
-  - port: 30005
-    targetPort: 30005
+  - port: 3000
+    targetPort: 3000
     nodePort: 50000
