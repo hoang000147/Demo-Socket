@@ -24,7 +24,7 @@ pipeline {
                 sh "chmod -R 777 changeTag.sh"
                 sh "./changeTag.sh ${DOCKER_TAG}"
                 sshagent(['vcntt']) {
-                    sh "kubectl get namespace"
+                    sh "ssh vcntt@112.137.141.18 kubectl get namespace"
                     sh "scp -o StrictHostKeyChecking=no socketdemo-deploy.yaml vcntt@112.137.141.18:~/socketdemo/"
                     script{
                         try{
