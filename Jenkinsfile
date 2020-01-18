@@ -21,6 +21,7 @@ pipeline {
         }
         stage('Deploy to k8s'){
             steps{
+                sh "cat socketdemo-deploy.yaml"
                 sh "chmod -R 777 changeTag.sh"
                 sh "./changeTag.sh ${DOCKER_TAG}"
                 sh "cat socketdemo-deploy.yaml"
