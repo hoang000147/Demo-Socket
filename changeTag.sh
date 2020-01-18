@@ -1,2 +1,2 @@
 #!/bin/bash
-sed "s/tagVersion/$1/g" socketdemo-deploy.yaml > socketdemo-deploy.yaml
+sed "s/tagVersion/$1/g" socketdemo.yaml > socketdemo-deploy.yaml
